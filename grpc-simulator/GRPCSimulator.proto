@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_multiple_files = true;
+package com.example.amanscode.grpc_simulator.generated;
+
+message SimulatorRequest {
+    string requestPojoString = 1;
+}
+
+message SimulatorResponse {
+    string responsePojoString = 1;
+}
+
+service SimulatorService {
+    rpc myGrpcService(SimulatorRequest) returns (SimulatorResponse);
+}
